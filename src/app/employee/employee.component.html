@@ -1,0 +1,20 @@
+<table class="table table-stripped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Last name</th>
+      <th>Hours worked</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr *ngFor="let dataItem of EmployeesList" [ngClass]="dataItem.workHours > 100 ? 'table-success' : 'table-danger'">
+  <!-- {'table-success' : dataItem.workHours > 100} -->
+  <td>{{ dataItem.lastName }}</td>
+  <td>{{ dataItem.firstName }}</td>
+  <td>{{ dataItem.workHours }}</td>
+</tr>
+  </tbody>
+  </table>
+
+
+
